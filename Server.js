@@ -23,5 +23,14 @@ app.get('/jwt', (req, res) => {
     res.send(token);
 })
 /*CRUD Api-endpoints for users, interests and match*/
+//Users
+
+
+// interests
+
+
+//Match
+
+
 
 app.listen(PORT, () => console.log(`Server is running on http://localhost:${PORT}`));
