@@ -18,13 +18,12 @@ const fs = require('fs')
 */
 
 //localhost:3000/ viser "Hello World"
-app.get('/',(req, res) => res.send ('The endpoints are /Users (/Payment and /Free), /Interests and /Match')) 
+app.get('/',(req, res) => res.send ('The endpoints are /Users (/Payment and /Free), /Interests')) 
 
 
 /*CRUD Api-endpoints for users, interests and match*/
 //Users
     app.use ("/Users", users);
-    
 
     // interests
 
@@ -32,6 +31,8 @@ app.get('/',(req, res) => res.send ('The endpoints are /Users (/Payment and /Fre
 
     //Match
     app.use ("/Match", match)
+
+
 
 /*
 const { appendFile } = require("fs");

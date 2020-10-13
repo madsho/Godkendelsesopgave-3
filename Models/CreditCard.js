@@ -6,6 +6,6 @@ class creditCard {
     } 
 }
 
-var bobcred = new creditCard ("1234 5678 9012 3456", "234", "10/24")
+var credsof = new creditCard ("1234 5678 9012 3456", "234", "10/24")
 
-console.log (bobcred)
+exports.Creditcard= Object.values(credsof) 
