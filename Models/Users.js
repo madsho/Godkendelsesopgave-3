@@ -36,3 +36,6 @@ var sofie = new paymentUser(2, "sof1@live.dk", "sof1234", "Sofie", "Laustsen", 1
 
 exports.myUser = [mads, sofie];
 
+exports.myPaymentuser = [sofie]
+exports.MyFreeUser = [mads]
+

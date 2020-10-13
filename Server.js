@@ -18,12 +18,13 @@ const fs = require('fs')
 */
 
 //localhost:3000/ viser "Hello World"
-app.get('/',(req, res) => res.send ('The endpoints are /Users, /Interests and /Match')) 
+app.get('/',(req, res) => res.send ('The endpoints are /Users (/Payment and /Free), /Interests and /Match')) 
 
 
 /*CRUD Api-endpoints for users, interests and match*/
 //Users
     app.use ("/Users", users);
+    
 
     // interests
 
