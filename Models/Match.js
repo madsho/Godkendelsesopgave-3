@@ -10,11 +10,9 @@ const interests = require("./Interest");
 const matchInterests = interests.myInterest1.filter(element => interests.myInterest2.includes(element));
 
 if (matchInterests.length !== 0){
-    console.log("Match!")
+    var matchID = "Match!"
 } else {
-    console.log("No match!")
+    var matchID = "No Match!"
 }
 
-var match1 = new Match (1)
-
-exports.myMatch = [match1]
+exports.myMatch = [matchID]
