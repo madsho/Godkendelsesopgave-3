@@ -4,8 +4,14 @@ const Users = require("../Models/Users.js");
 
 //both users
 router.get("/", (req, res) =>{
-    res.json(Users.myUser);
+    res.json(Users.myUser)
+    /*
+    .post((req,res)=>{})
+    .put((req,res)=>{})
+    .delete((req,res)=>{})*/
 })
+
+    
 
 //payment users
 router.get("/Payment", (req, res) =>{
