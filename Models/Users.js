@@ -33,3 +33,5 @@ var mads = new freeUser (1, "mads.holmvang@hotmail.com", "bob1234", "Mads", "Hol
 
 //ny payment user
 var bob = new paymentUser(2, "bob1@live.dk", "mads1234", "Bob", "Bobster", 19, "Male,", [], [])
+
+exports.myUser = [mads,bob];
