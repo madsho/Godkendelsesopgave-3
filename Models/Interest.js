@@ -7,8 +7,12 @@ class interest{
     }
 }
 
-var interestmads = new interest (1.1, "female","having fun and hanging out with freinds" , "Football and Formel 1", )
-var interestbob = new interest (2.1, "female", "Golf, coffee and boating", "Golf") 
+var interestmads = new interest (1.1, "female", "movies" , "Football", )
+var interestfif = new interest (2.1, "male", "movies", "Golf") 
 
 
-exports.myInterest = [interestmads,interestmads];
+exports.myInterest = [interestmads,interestfif];
+
+//interest for the two persons:
+exports.myInterest1 = Object.values(interestmads)
+exports.myInterest2 = Object.values(interestfif)

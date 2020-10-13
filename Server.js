@@ -6,7 +6,8 @@ app.use(cors())
 
 const users = require ("./Routes/Users");
 const interests = require ("./Routes/Interests");
-const { appendFile } = require("fs");
+const match = require ("./Routes/Match")
+
 
 
 const PORT = process.env.PORT || 3000 //Porten er på 3000 
@@ -17,23 +18,22 @@ const fs = require('fs')
 */
 
 //localhost:3000/ viser "Hello World"
-app.get('/',(req, res) => res.send ('Hello World')) 
+app.get('/',(req, res) => res.send ('The endpoints are /Users, /Interests and /Match')) 
 
 
 /*CRUD Api-endpoints for users, interests and match*/
 //Users
+    app.use ("/Users", users);
 
-app.use ("/Users", users);
+    // interests
 
+    app.use ("/Interests", interests);
 
-// interests
-
-app.use ("/Interests", interests);
-
-//Match
-
+    //Match
+    app.use ("/Match", match)
 
 /*
+const { appendFile } = require("fs");
 
 //localhost:3000/User viser beskeden nedenfor
 app.get('/User', (req,res) => {

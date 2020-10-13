@@ -32,6 +32,7 @@ class paymentUser extends user{
 var mads = new freeUser (1, "mads.holmvang@hotmail.com", "bob1234", "Mads", "Holmvang", 20, "Male", [], )
 
 //ny payment user
-var bob = new paymentUser(2, "bob1@live.dk", "mads1234", "Bob", "Bobster", 19, "Male,", [], [])
+var sofie = new paymentUser(2, "sof1@live.dk", "sof1234", "Sofie", "Laustsen", 19, "female,", [], [])
 
-exports.myUser = [mads,bob];
+exports.myUser = [mads, sofie];
+
