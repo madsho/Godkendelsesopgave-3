@@ -6,4 +6,4 @@ class Match{
 
 var match1 = new Match (1)
 
-console.log (match1)
+exports.myMatch = [match1]

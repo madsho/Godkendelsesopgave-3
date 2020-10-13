@@ -4,7 +4,9 @@ const app = express()
 app.use(cors())
 
 
-const users = require ("./Routes/Users")
+const users = require ("./Routes/Users");
+const interests = require ("./Routes/Interests");
+const { appendFile } = require("fs");
 
 
 const PORT = process.env.PORT || 3000 //Porten er på 3000 
@@ -21,10 +23,12 @@ app.get('/',(req, res) => res.send ('Hello World'))
 /*CRUD Api-endpoints for users, interests and match*/
 //Users
 
-app.use ("/Users", users)
+app.use ("/Users", users);
+
 
 // interests
 
+app.use ("/Interests", interests);
 
 //Match
 
