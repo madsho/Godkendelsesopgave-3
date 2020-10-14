@@ -42,3 +42,13 @@ exports.myUser = [mads, sofie];
 exports.myPaymentuser = [sofie]
 exports.MyFreeUser = [mads]
 
+
+//New users for updating API
+var mads2 = new freeUser (1, "mads.holmvang@hotmail.com", "bob1234", "Mads", "Holmvang", 20, "Male", interest.newInterest1 )
+
+//ny payment user
+var sofie2 = new paymentUser(2, "sof1@live.dk", "sof1234", "Sofie", "Laustsen", 19, "female,", interest.newInterest2, Credit)
+
+exports.newUsers = [mads2, sofie2];
+exports.newUser1 = [mads2];
+exports.newUser2 = [sofie2];

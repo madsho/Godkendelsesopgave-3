@@ -17,4 +17,14 @@ if (matchInterests.length !== 0){
     var matchID = "No Match!"
 }
 
+// Looking for at macth between the new interests   
+const newMatchInterests = interests.newInterest1.filter(element => interests.newInterest2.includes(element));
+
+if (newMatchInterests.length !== 0){
+    var newmatchID = "Match!"
+} else {
+    var newmatchID = "No Match!"
+}
+
 exports.myMatch = [matchID]
+exports.newMatch = [newmatchID]
