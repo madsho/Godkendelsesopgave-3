@@ -3,12 +3,39 @@ const cors = require ("cors") // bruger cors til at køre på en webbrowser
 const app = express() 
 app.use(cors())
 
+// Routes til endpoints
+const users = require ("./Routes/Users");
+const interests = require ("./Routes/Interests");
+const match = require ("./Routes/Match")
+
+
+
 const PORT = process.env.PORT || 3000 //Porten er på 3000 
+
+//JSON webtoken til authentication 
 const jwt = require('jsonwebtoken');
 const fs = require('fs')
 
-//localhost:3000/ viser "Hello World"
-app.get('/',(req, res) => res.send ('Hello World')) 
+
+//localhost:3000/ viser hvilke routes man kan tage
+app.get('/',(req, res) => res.send ('The endpoints are /Users (/Payment and /Free), /Interests and Match')) 
+
+
+//CRUD Api-endpoints for users, interests and match
+    //Users
+    app.use ("/Users", users);
+    
+    // interests
+
+    app.use ("/Interests", interests);
+
+    //Match
+    app.use ("/Match", match)
+
+
+
+// JSON Webtoken 
+const { appendFile } = require("fs");
 
 //localhost:3000/User viser beskeden nedenfor
 app.get('/User', (req,res) => {
@@ -22,6 +49,5 @@ app.get('/jwt', (req, res) => {
     let token = jwt.sign({ "body": "stuff" }, "MySuperSecretPassPhrase", { algorithm: 'HS256'}); //
     res.send(token);
 })
-/*CRUD Api-endpoints for users, interests and match*/
 
 app.listen(PORT, () => console.log(`Server is running on http://localhost:${PORT}`));
