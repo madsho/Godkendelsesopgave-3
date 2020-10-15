@@ -1,5 +1,3 @@
-
-
 class image{
     constructor (imageId, author, fileType, date){
         this.imageId = imageId
