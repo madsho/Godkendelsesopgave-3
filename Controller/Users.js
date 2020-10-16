@@ -43,8 +43,6 @@ router.delete("/Payment", (req,res) => {
     res.json({"message": "Deleted User"})
 });
 
-
-
 //free users
 router.get("/Free", (req, res) =>{
     res.json(Users.MyFreeUser); // Shows info about the paymnet users
