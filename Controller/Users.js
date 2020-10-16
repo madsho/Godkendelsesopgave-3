@@ -9,7 +9,7 @@ const { readSync } = require("fs");
 
 
 
-//Api endpints for both users
+//CRUD endpoints for both users
 router.get("/", (req, res) =>{
     res.json(Users.myUser) // Shows info about the two users
 });
@@ -23,7 +23,7 @@ router.put("/", (req,res) => {
 });
 router.delete("/", (req,res) => {
     Users.myUser = []; //The two users are deleted or in other words changed to an empty array 
-    Users.newUsers
+    Users.newUsers = [];
     res.json({"message": "Deleted Users"})
 });
 
@@ -42,8 +42,6 @@ router.delete("/Payment", (req,res) => {
     Users.myPaymentuser = []; //The user are deleted or in other words changed to an empty array 
     res.json({"message": "Deleted User"})
 });
-
-
 
 //free users
 router.get("/Free", (req, res) =>{

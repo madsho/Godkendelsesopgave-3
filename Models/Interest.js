@@ -8,8 +8,6 @@ class interest{
 }
 
 
-
-
 // interests for persons
 var interestmads = new interest (1.1, "female", "movies" , "Football", )
 var interestfif = new interest (2.1, "male", "movies", "Golf") 
